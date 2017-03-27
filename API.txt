@@ -1,0 +1,16 @@
+Class:
+    HTMLGenerator
+        .div():
+            Input: None
+            Output: string containing div
+            Access: Protected
+            Inherited From: N/A
+            Functionality: Produces <div></div>
+            
+    CSSGenerator
+
+    JSGenerator
+
+    CSGenerator
+
+    FileCreator

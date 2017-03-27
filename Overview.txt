@@ -1,0 +1,31 @@
+Primary Components:
+    - GUI
+        - Admin Panels:
+            - Account management
+            - Blog Management
+            - Site Creator
+            - DB Management
+        - Pop Up Text Editor
+    - Code generation
+            - HTML Generator
+            - CSS Generator
+            - Javascript Generator
+            - DotNet Generator
+            - File Creator
+    - WireFrame Pool
+            - Varying styles of base pages
+    - Javascript selection (everything is clickable!)
+    - Client database integration and generation
+    - Smart Code Insertion
+    - Deployment Assistance
+        - At least a helpme guide for AWS
+            - FUTURE TARGET: On click auto-deployment
+    - Payment Processing
+
+
+Major Classes:
+    - HTMLGenerator
+    - CSSGenerator
+    - JSGenerator
+    - CSGenerator
+    - FileCreator
