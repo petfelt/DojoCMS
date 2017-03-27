@@ -3,8 +3,11 @@ Modifications:
     - Methods MUST ONLY DO ONE TASK, can cascade into more methods
 Casing:
     - Capitalize the first letter of each word for classes, methods
+        * ClassNameExample
     - Camel case variables
+        * variableNameExample
     - Constants all upper case with underscore between each word
+        * CONSTANT_NAME_EXAMPLE
 
 Documentation:
     - Logical grouping of methods with section header
