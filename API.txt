@@ -14,3 +14,41 @@ Class:
     CSGenerator
 
     FileCreator
+    
+    DBSpawner:
+        .createDB():
+            Input: String (DB name)
+            Output: String
+            Access: Public
+            Inherited From: N/A
+            Functionality: Create database with provided name
+            
+        .createTable(str)
+            Input: String (table name)
+            Output: Void
+            Access: Public
+            Inherited From: N/A
+            Functionality: Produces a table in the current active database with the provided name
+        
+        .addCol(str)
+            Input: String
+            Output: String - Success or failure message
+            Access: Public
+            Inherited From: N/A
+            Functionality: Append new column to table with the provided title
+            
+        .listCols()
+            Input: None
+            Output: String
+            Access: Public
+            Inherited From: N/A
+            Functionality: Produces a list of all the database columns
+        
+        .addToCol()
+            Input: String (Column name) String (Primary Key to append value to)
+            Output: String
+            Access: Public
+            Inherited From: N/A
+            Functionality: Appends value at given column to given row, returns success message
+        
+        
