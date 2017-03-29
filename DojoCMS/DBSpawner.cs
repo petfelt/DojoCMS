@@ -1,11 +1,13 @@
 using System;
-
+using MySql.Data.MySqlClient;   
 namespace DojoCMS {
     public class DBSpawner{
         public string dbName;
-        public DBSpawner(String name) 
+        private readonly DbConnector dbConnection;
+        public DBSpawner(String name, DbConnector connect) 
         {
             dbName = name;
+            dbConnection = connect;
         }
 
         public void startDatabase() 
@@ -15,25 +17,26 @@ namespace DojoCMS {
         }
         public void genTables() 
         {
-            String toCreate = String.Format("USE {0}; CREATE TABLE User("
+            String toCreate = String.Format("USE {0}; CREATE TABLE Users("
                 + "id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,"
                 + "name VARCHAR(30) NOT NULL,"
                 + "email VARCHAR(60) NOT NULL,"
                 + "password VARCHAR(50) NOT NULL,"
                 + "created_at TIMESTAMP);", dbName);
-            DbConnection.DbConnector.Query(toCreate);
-            toCreate = String.Format("USE {0}; CREATE TABLE Post("
+                
+            string test = DbConnector.Execute(toCreate);
+            toCreate = String.Format("USE {0}; CREATE TABLE Posts("
                 + "id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,"
-                + "created_by INT UNSIGNED NOT NULL,"
-                + "post VARCHAR(500) NOT NULL,"
+                + "userid INT UNSIGNED NOT NULL,"
+                + "post TEXT NOT NULL,"
                 + "created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,"
                 + "updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP);", dbName);
             DbConnection.DbConnector.Query(toCreate);
-            toCreate = String.Format("USE {0}; CREATE TABLE Comment("
+            toCreate = String.Format("USE {0}; CREATE TABLE Comments("
                 + "id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,"
-                + "posted_by INT UNSIGNED NOT NULL,"
-                + "comment_for INT UNSIGNED NOT NULL,"
-                + "comment VARCHAR(200) NOT NULL,"
+                + "userid INT UNSIGNED NOT NULL,"
+                + "postid INT UNSIGNED NOT NULL,"
+                + "comment TEXT NOT NULL,"
                 + "created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,"
                 + "updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP);", dbName);
             DbConnection.DbConnector.Query(toCreate);

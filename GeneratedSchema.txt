@@ -1,23 +1,22 @@
-User:
-    ID - PRIMARY KEY
+Users:
+    id - PRIMARY KEY
     name
     email
     password
-    created_at
 
-Post:
-    ID
+Posts:
+    id
     created_at
     updated_at
-    created_by
+    userid
     post
 
-Comment:
-    ID
+Comments:
+    id
     created_at
     updated_at
-    comment_for
-    posted_by
+    postid
+    userid
     comment
 
     

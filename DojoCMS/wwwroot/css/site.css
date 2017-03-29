@@ -1,1 +1,34 @@
 /*Write all of your CSS here*/
+
+/*.mainPic{
+    margin-top: -20px;
+}
+img{
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+}
+.navbar{
+    position: fixed;
+    right: 66px;
+    
+    background-color: transparent;
+}*/
+.navbar{
+    margin-bottom:0px;
+    border-radius:0px;
+}
+.jumbotron{
+    margin-bottom:0px;
+    border-radius:0px;
+    text-align:center;
+    /*display:inline-block;*/
+}
+.inside{
+    display: inline-block;
+    width:25%;
+    margin-right:5%; 
+}
+.mainPic{
+    width:100%;
+}
