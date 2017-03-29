@@ -8,6 +8,7 @@ Class:
             Functionality: Produces <div></div>
             
     CSSGenerator
+	custom.css: File for any basic edits we want to make to Bootstrap commands for OUR 	website.
 
     JSGenerator
 
