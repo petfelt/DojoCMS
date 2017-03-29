@@ -1,0 +1,35 @@
+/*Write all of your CSS here*/
+body{
+    /*background-color:lightgray;*/
+   background-color:white;
+}
+.side_nav{
+   min-height: 753px;
+   background-color:teal;
+   color:white
+}
+.jumbotron{
+    background-color:white;
+}
+.story{
+    margin-top:-20px;
+    background-color:white;
+    padding-left:20px;
+    min-height: 590px;
+}
+
+.tempContext{
+    margin-top:-20px;
+}
+.tiles{
+    /*background-color:green;*/
+    height:450px;
+    margin-left:-10px;
+    margin-right:-10px;
+}
+#navbar2{
+    border: 1px solid #f7f7f9;
+}
+.navbars{
+    margin-bottom: 5%;
+}
