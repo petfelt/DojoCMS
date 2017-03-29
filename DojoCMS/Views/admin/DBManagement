@@ -1,0 +1,3 @@
+@{
+    ViewData["Title"] = "Home Page";
+}<!-- Admin page for managing DBs controlled by this user -->
