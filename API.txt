@@ -8,9 +8,40 @@ Class:
             Functionality: Produces <div></div>
             
     CSSGenerator
+	custom.css: File for any basic edits we want to make to Bootstrap commands for OUR 	website.
 
     JSGenerator
 
     CSGenerator
 
     FileCreator
+    
+    DBSpawner:
+        Constructor:
+            DBSpawner(String)
+                Input: String
+                Output: N/A
+                Inherited From: N/A
+                Access: Public
+                Functionality: Instantiates DBSpawner class with the given 
+            
+            .startDatabase()
+                Input: None
+                Output: None
+                Inherited From: None
+                Access: Public
+                Functionality: Creates database and generates User, Comment, and Post tables
+        
+            .genTables()
+                Input: None
+                Output: None
+                Inherited From: None
+                Access: Public
+                Functionality: Creates User, Comment and Post tables
+                
+            .createDb()
+                Input: None
+                Output: None
+                Inherited From: None
+                Access: Public
+                Functionality: Creates database
