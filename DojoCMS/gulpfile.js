@@ -1,7 +1,8 @@
-var gulp = require('gulp');
-//
-return gulp.task('WriteFile', function() {
-  gulp.src('{InputFile}')
-  //can perform other logic tasks here
-    .pipe(gulp.dest('OutputDirectory/OutputFileName'))
-});
+// var gulp = require('gulp');
+// var InputString = "stuff"
+// //
+// gulp.task('default', function() {
+//    gulp.dest('Views/UserPages/'+InputString)
+// });
+
+//not using gulp for MVP
