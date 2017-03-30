@@ -10,6 +10,15 @@ namespace DojoCMS.Controllers
 {
     public class HomeController : Controller
     {
+        private BloggingContext _context;
+
+        public HomeController()
+        {
+            DBManager dbManger = new DBManager();
+            _context =  dbManger.GetUserDBContext("AppNameDb") as BloggingContext;
+        }
+        
+        
         // GET: /Home/
          private CmsContext  _context;
 
