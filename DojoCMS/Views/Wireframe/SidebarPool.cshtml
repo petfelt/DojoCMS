@@ -1,0 +1,71 @@
+@{
+    ViewData["Title"] = "WireFrames Page";
+}
+<script>
+    function SelectedSidebar(SidebarId){
+        $('#result').val("");
+        if(SidebarId){
+            $.get('/selectedSidebar/'+SidebarId,function(req,res){
+                $('#result').val(SidebarId +' is selected');
+            });
+        }
+    }
+</script>
+<div class="container sideNav">
+    <div class="col-sm-4 col-lg-4"  onclick="SelectedSidebar(1)">
+        <div class="sidebars">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+     <div class="col-sm-4 col-lg-4"  onclick="SelectedSidebar(2)">
+        <div class="sidebars">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+    <div class="col-sm-4 col-lg-4"  onclick="SelectedSidebar(3)">
+        <div class="sidebars">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+    <input type="text" id="result">
+    <a href="/FinalBuild" class="btn btn-primary">Next</a>
+</div>
