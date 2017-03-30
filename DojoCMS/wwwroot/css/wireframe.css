@@ -27,11 +27,18 @@ body{
     margin-left:-10px;
     margin-right:-10px;
 }
-#navbar2{
-    border: 1px solid #f7f7f9;
-}
 .navbars{
     margin-bottom: 5%;
+}
+
+.sidebar{
+    position:absolute;
+    height:79%;
+    background-color: #f1f1f1;
+    /*background-color: gray;*/
+}
+.sidebar1{
+    text-align:center;
 }
 
 .font1{
