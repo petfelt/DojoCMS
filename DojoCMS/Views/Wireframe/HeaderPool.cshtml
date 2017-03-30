@@ -1,3 +1,32 @@
 @{
     ViewData["Title"] = "WireFrames Page";
 }
+<script>
+    function SelectedHeader(HeaderId){
+        $('#result').val("");
+        if(HeaderId){
+            $.get('/selectedHeader/'+HeaderId,function(req,res){
+                $('#result').val(HeaderId +' is selected');
+            });
+        }
+    }
+</script>
+
+<div class="container">
+    <div class="col-sm-4 col-lg-4"  onclick="SelectedHeader(1)">
+        <h4>Post Title Font 1</h4>
+        <h2 class="font1">"Serif" Post Title</h2>
+    </div>
+    <div class="col-sm-4 col-lg-4"  onclick="SelectedHeader(2)">
+        <h4>Post Title Font 2</h4>
+        <h2 class="font2">"Monospace" Post Title</h2>
+    </div>
+    <div class="col-sm-4 col-lg-4"  onclick="SelectedHeader(3)">
+        <h4>Post Title Font 3</h4>
+        <h2 class="font3">"Sans-serif" Post Title</h2>
+    </div>
+    <div class="col-sm-10 col-lg-10">
+        <input type="text" id="result">
+        <a href="/BodyPool" class="btn btn-primary">Next</a>
+    </div>
+</div>

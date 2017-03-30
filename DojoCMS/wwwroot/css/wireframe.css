@@ -33,3 +33,15 @@ body{
 .navbars{
     margin-bottom: 5%;
 }
+
+.font1{
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.font2{
+    font-family: monospace, "Courier New", Courier;
+}
+
+.font3{
+    font-family: Helvetica, Arial, sans-serif;
+}
