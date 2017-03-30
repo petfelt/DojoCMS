@@ -1,0 +1,30 @@
+Users:
+    id - PRIMARY KEY
+    name
+    email
+    password
+
+Posts:
+    id
+    created_at
+    updated_at
+    userid
+    post
+
+Comments:
+    id
+    created_at
+    updated_at
+    postid
+    userid
+    comment
+
+    
+    
+-----------------               -------------                -------------
+|   Comment     |----->--->-----|   User    |---<------<-----|   Post    |
+-----------------               -------------                -------------
+        |                                                           |
+        |                                                           |
+        |                                                           |
+        |--->--->------>------>------>------>----->----->---->--->---
