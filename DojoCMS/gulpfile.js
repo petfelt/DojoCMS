@@ -1,7 +1,7 @@
 var gulp = require('gulp');
-
-gulp.task('WriteFile', function() {
-  gulp.src('{inputFile}')
+//
+return gulp.task('WriteFile', function() {
+  gulp.src('{InputFile}')
   //can perform other logic tasks here
-  .pipe(gulp.dest('{outputDestination}'))
+    .pipe(gulp.dest('OutputDirectory/OutputFileName'))
 });
