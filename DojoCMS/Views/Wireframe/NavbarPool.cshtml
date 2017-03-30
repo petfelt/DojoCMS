@@ -2,14 +2,18 @@
     ViewData["Title"] = "WireFrames Page";
 }
 <script>
-    function NavToAdd(navName){
+    function NavToAdd(navId){
         $('#result').val("");
-        $('#result').val(navName +' is selected');
+        if(navId){
+            $.get('/selectedNav/'+navId,function(req,res){
+                $('#result').val(navId +' is selected');
+            });
+        }
     }
 </script>
 
 <div class="container">
-    <div id="navbar1" class="navbars" onclick="NavToAdd('navbar1')">
+    <div id="navbar1" class="navbars" onclick="NavToAdd(1)">
         <h4>Navbar1</h4>
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
@@ -25,24 +29,24 @@
             </div>
         </nav>
     </div>
-    <div id="navbar2" class="navbars" onclick="NavToAdd('navbar2')"> 
+    <div id="navbar2" class="navbars" onclick="NavToAdd(2)">
         <h4>Navbar2</h4>
-        <ul class="nav nav-pills nav-justified">
-            <li class="nav-item">
-                <a class="nav-link active" href="#">Active</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Longer nav link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-        </ul>
+        <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            <a class="navbar-brand" href="#">WebSiteName</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Page 1</a></li>
+                <li><a href="#">Page 2</a></li>
+                <li><a href="#">Page 3</a></li>
+            <!--<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
+            <!--<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
+            </ul>
+        </div>
+        </nav>
     </div>
-    <div id="navbar3" class="navbars" onclick="NavToAdd('navbar3')">
+    <div id="navbar3" class="navbars" onclick="NavToAdd(3)">
         <h4>Navbar3</h4>
         <ul class="nav nav-tabs">
             <li class="nav-item">
@@ -67,5 +71,5 @@
         </ul>
     </div>
     <input type="text" id="result">
-    <a href="/HeaderPool" class="btn btn-primary">Next</a>
+    <a href="/SidebarPool" class="btn btn-primary">Next</a>
 </div>
