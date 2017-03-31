@@ -1,21 +1,18 @@
 @{
     ViewData["Title"] = "WireFrames Page";
 }
-Edit here
-@ViewBag.navId
-@ViewBag.sidebarId
+<div>
 <div>
     @{
         if(@ViewBag.navId==1){
-            <div id="navbar1" class="navbars">
-                <h4>Navbar1</h4>
+            <div id="navbar1">
                 <nav class="navbar navbar-inverse">
                     <div class="container-fluid">
                         <div class="navbar-header">
                             <a class="navbar-brand" href="#" contenteditable="true">WebSiteName</a>
                         </div>
                         <ul class="nav navbar-nav">
-                        <li class="active"><a href="#" contenteditable="true">Home</a></li>
+                        <li><a href="#" contenteditable="true">Home</a></li>
                         <li><a href="#" contenteditable="true">Page 1</a></li>
                         <li><a href="#" contenteditable="true">Page 2</a></li>
                         <li><a href="#" contenteditable="true">Page 3</a></li>
@@ -25,8 +22,7 @@ Edit here
             </div>
         }
         if(@ViewBag.navId==2){
-            <div id="navbar2" class="navbars"> 
-                <h4>Navbar2</h4>
+            <div id="navbar2"> 
                 <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header">
@@ -36,29 +32,19 @@ Edit here
                         <li><a href="#" contenteditable="true">Page 1</a></li>
                         <li><a href="#" contenteditable="true">Page 2</a></li>
                         <li><a href="#" contenteditable="true">Page 3</a></li>
-                    <!--<li><a href="#" contenteditable="true"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
-                    <!--<li><a href="#" contenteditable="true"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
                     </ul>
                 </div>
                 </nav>
             </div>
         }
         if(@ViewBag.navId==3){  
-            <div id="navbar3" class="navbars">
-                <h4>Navbar3</h4>
+            <div id="navbar3">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
                         <a class="nav-link active" href="#" contenteditable="true">Active</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                        <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#" contenteditable="true">Action</a>
-                        <a class="dropdown-item" href="#" contenteditable="true">Another action</a>
-                        <a class="dropdown-item" href="#" contenteditable="true">Something else here</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#" contenteditable="true">Separated link</a>
-                        </div>
+                    <li class="nav-item">
+                        <a href="#" contenteditable="true">Action</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" contenteditable="true">Link</a>
@@ -75,12 +61,12 @@ Edit here
     @{
         if(@ViewBag.sidebarId==1){
             <div class="">
-                <h4>John's Blog</h4>
+                <br>
                 <ul class="nav nav-pills nav-stacked toggle">
-                    <li><a href="#section1">Home</a></li>
-                    <li><a href="#section2">Friends</a></li>
-                    <li><a href="#section3">Family</a></li>
-                    <li><a href="#section4">Photos</a></li>
+                    <li><a href="#section1" contenteditable="true">Home</a></li>
+                    <li><a href="#section2" contenteditable="true">Friends</a></li>
+                    <li><a href="#section3" contenteditable="true">Family</a></li>
+                    <li><a href="#section4" contenteditable="true">Photos</a></li>
                 </ul><br>
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search Blog...">
@@ -130,3 +116,39 @@ Edit here
         }
     }
 </div>
+<div class="col-sm-9 col-sm-offset-3">
+    @{
+        if(@ViewBag.headerId==1){
+            <div class="">
+                <h2 class="font1" contenteditable="true">Post Title</h2>
+            </div>
+        }  else if(@ViewBag.headerId==2){
+            <div class="">
+                <h2 class="font2" contenteditable="true">Post Title</h2>
+            </div>
+        }  else if(@ViewBag.headerId==3){
+            <div class="">
+                <h2 class="font3" contenteditable="true">Post Title</h2>
+            </div>
+        }
+        if(@ViewBag.bodyId==1){
+            <div class="">
+                <h5 class="font1"><span class="glyphicon glyphicon-time"></span> Post by John Doe, Mar 30, 2017.</h5><br>
+                <p class="font1" contenteditable="true">Edit your post text here.</p>
+            </div>
+        }  else if(@ViewBag.bodyId==2){
+            <div class="">
+                <h5 class="font2"><span class="glyphicon glyphicon-time"></span> Post by John Doe, Mar 30, 2017.</h5><br>
+                <p class="font2" contenteditable="true">Edit your post text here.</p>
+            </div>
+        }  else if(@ViewBag.bodyId==3){
+            <div class="">
+                <h5 class="font3"><span class="glyphicon glyphicon-time"></span> Post by John Doe, Mar 30, 2017.</h5><br>
+                <p class="font3" contenteditable="true">Edit your post text here.</p>
+            </div>
+        }
+    }
+
+</div>
+</div>
+
