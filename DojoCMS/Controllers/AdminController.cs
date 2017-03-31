@@ -16,7 +16,7 @@ namespace DojoCMS.Controllers
         {   
             ViewBag.Errors = new List<string>();
             ViewBag.LoginErrors = new List<string>();
-            return View("AdminIndex");
+            return View("UserDashboard");
         }
     }
 }
