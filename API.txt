@@ -1,3 +1,5 @@
+DojoCMS API
+
 Class:
     HTMLGenerator
         .div():

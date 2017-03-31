@@ -1,3 +1,5 @@
+Running Overview of Functionality for DojoCMS Project
+
 Primary Components:
     - GUI
         - Admin Panels:

@@ -1,3 +1,5 @@
+DojoCMS DB Schema
+
 User:
     ID - PRIMARY KEY
     name

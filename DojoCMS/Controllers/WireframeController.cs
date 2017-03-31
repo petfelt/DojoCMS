@@ -84,7 +84,8 @@ namespace DojoCMS.Controllers
         [Route("CreateFile")]
         public IActionResult CreateFile(string HTMLString){
             string PassedString = "@{\n\tViewData["+"\"Title\""+"]  = "+"\"New Page\""+";\n";
-            PassedString = PassedString+"\tLayout = \"~/Views/Shared/_NewPageLayout.cshtml\";\n}\n"+HTMLString;            FileManager.MakeUserViewsDirectory("Views", "User");
+            PassedString = PassedString+"\tLayout = \"~/Views/Shared/_NewPageLayout.cshtml\";\n}\n"+HTMLString;
+            FileManager.MakeUserViewsDirectory("Views", "User");
             FileManager.MakePageFile("Views","User", PassedString);
             return RedirectToAction("User", "UserPage");
         }
