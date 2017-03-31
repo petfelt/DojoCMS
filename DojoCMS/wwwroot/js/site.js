@@ -27,7 +27,7 @@ $(document).ready(function() {
 
 
 
-        $.post( "test.php", { returner }, function( data ) {
+        $.post( "CreateFile", { returner }, function( data ) {
             console.log( data ); // Return data
         }, "json");
     });
