@@ -8,12 +8,6 @@ namespace DojoCMS.Models
         [RegularExpression(@"^[a-zA-Z]+$")]
         public string name { get; set; }
 
-
-        [Required]
-        [MinLength(2)]
-        [RegularExpression(@"^[a-zA-Z]+$")]
-        public string username { get; set; }
-
         [Required]
         [EmailAddress]
         public string email { get; set; }
