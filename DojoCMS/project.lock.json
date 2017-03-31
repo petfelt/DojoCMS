@@ -1726,7 +1726,7 @@
           }
         }
       },
-      "MySql.Data/7.0.6-ir31": {
+      "MySql.Data/7.0.7-m61": {
         "type": "package",
         "dependencies": {
           "Google.Protobuf": "3.0.0",
@@ -5995,7 +5995,7 @@
           "runtimes/unix/lib/netstandard1.3/Microsoft.Win32.Registry.dll": {}
         }
       },
-      "MySql.Data/7.0.6-ir31": {
+      "MySql.Data/7.0.7-m61": {
         "type": "package",
         "dependencies": {
           "Google.Protobuf": "3.0.0",
@@ -10099,13 +10099,12 @@
         "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll"
       ]
     },
-    "MySql.Data/7.0.6-ir31": {
-      "sha512": "PFMjB4pLdMT0lIGySbP5NVWPriqdA3ZqvLzpHTc/60VkCIAin2dZJIb6A+km9pe3At0rl7ngj4eq06t69YEJXQ==",
+    "MySql.Data/7.0.7-m61": {
+      "sha512": "xEoqBSNVDsJagx2fqSvN4jHjpuUPP5S+kyYpZl1dJ300QmKb0Oqsy6XB0juxiWRFniX43VY3QzPZsEesqx9NRA==",
       "type": "package",
-      "path": "MySql.Data/7.0.6-ir31",
+      "path": "MySql.Data/7.0.7-m61",
       "files": [
-        "Content/ReleaseNotes.txt",
-        "MySql.Data.7.0.6-ir31.nupkg.sha512",
+        "MySql.Data.7.0.7-m61.nupkg.sha512",
         "MySql.Data.nuspec",
         "README",
         "lib/net451/MySql.Data.dll",
@@ -16415,7 +16414,7 @@
       "Microsoft.Extensions.Options.ConfigurationExtensions >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 15.0.0",
       "Microsoft.NETCore.App >= 1.0.0",
-      "MySql.Data >= 7.0.6-IR31",
+      "MySql.Data >= 7.0.7-m61",
       "MySql.Data.EntityFrameworkCore >= 7.0.7-m61",
       "xunit >= 2.2.0",
       "xunit.runner.visualstudio >= 2.2.0"
