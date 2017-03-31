@@ -1,3 +1,5 @@
+Unified Style Guide for DojoCMS Project
+
 Modifications:
     - Fork and modify, then initiate a pull request to commit changes
     - Methods MUST ONLY DO ONE TASK, can cascade into more methods
