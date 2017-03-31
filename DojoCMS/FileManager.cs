@@ -5,27 +5,25 @@ namespace DojoCMS
 {
     public class FileManager
     {
-        static void MakeUserDirectory(string UserName)
+        public static void MakeUserDirectory(string UserName)
         {
-            string PathString = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-            Path.Combine(PathString, UserName);
+            string PathString = Directory.GetCurrentDirectory();
+            PathString = Path.Combine(PathString, UserName);
             System.IO.Directory.CreateDirectory(PathString);
+            
         }
-        static void MakeUserViewsDirectory(string UserName, string PageName)
-        {
-            string PathString = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-            Path.Combine(PathString, UserName, PageName);
-            System.IO.Directory.CreateDirectory(PathString);
-        }
-        static void MakePageFile(string UserName, string PageName, string HTMLString)
-        {
-            string PathString = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-            Path.Combine(PathString, UserName, PageName, ".cshtml");
-            System.IO.File.WriteAllText(PathString, HTMLString);
-        }
-        static void WriteToFile(string PageText)
-        {
 
+        public static void MakeUserViewsDirectory(string UserName, string PageName)
+        {
+            string PathString = Directory.GetCurrentDirectory();
+            PathString = Path.Combine(PathString, UserName, PageName);
+            System.IO.Directory.CreateDirectory(PathString);
+        }
+        public static void MakePageFile(string UserName, string PageName, string HTMLString)
+        {
+            string PathString = Directory.GetCurrentDirectory();
+            PathString = Path.Combine(PathString, UserName, PageName, ".cshtml");
+            System.IO.File.WriteAllText(PathString, HTMLString);
         }
     }
 }
