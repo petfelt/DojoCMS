@@ -1,5 +1,7 @@
 using System;
 using MySql.Data.MySqlClient;   
+using DbConnection;
+
 namespace DojoCMS {
     public class DBSpawner{
         public string dbName;
@@ -24,7 +26,7 @@ namespace DojoCMS {
                 + "password VARCHAR(50) NOT NULL,"
                 + "created_at TIMESTAMP);", dbName);
                 
-            string test = DbConnector.Execute(toCreate);
+            DbConnector.Execute(toCreate);
             toCreate = String.Format("USE {0}; CREATE TABLE Posts("
                 + "id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,"
                 + "userid INT UNSIGNED NOT NULL,"
