@@ -11,10 +11,10 @@ namespace DojoCMS.Controllers
     public class UserController : Controller
     {
         [HttpGet]
-        [Route("User")]
-        public IActionResult User()
+        [Route("UserPage")]
+        public IActionResult UserPage()
         {
-            return Redirect("User");
+            return View("User");
         }
     }
 }
