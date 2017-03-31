@@ -26,157 +26,157 @@ if (input) {
 
 </script>
 <div id="allData">
-    @{
-        <!-- All classes or text values below each comment are the ones needing changing. -->
-        <!-- The ViewBags are to select which navBar, sideBar, etc. you wanna use. -->
-        if(@ViewBag.navId==1){
-            <div id="navBar">
-                // Class below this.
-                <nav class="navbar navbar-inverse">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
-                            // Text/name attribute below this.
-                            <a class="navbar-brand" href="#" contenteditable="true" name="WebSiteName">WebSiteName</a>
-                        </div>
-                        // Class below this.
-                        <ul class="nav navbar-nav">
-                        // Text/name attribute below this.
-                        <li><a href="#" contenteditable="true" name="Home">Home</a></li>
-                        // Text/name attribute below this.
-                        <li><a href="#" contenteditable="true" name="Page 1">Page 1</a></li>
-                        // Text/name attribute below this.
-                        <li><a href="#" contenteditable="true" name="Page 2">Page 2</a></li>
-                        // Text/name attribute below this.
-                        <li><a href="#" contenteditable="true" name="Page 3">Page 3</a></li>
-                        </ul>
-                    </div>
-                </nav>
+@{
+<!-- All classes or text values below each comment are the ones needing changing. -->
+<!-- The ViewBags are to select which navBar, sideBar, etc. you wanna use. -->
+if(@ViewBag.navId==1){
+<div id="navBar">
+    <!--Class below this.-->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <!--Text/name attribute below this.-->
+                <a class="navbar-brand" href="#" contenteditable="true" name="WebSiteName">WebSiteName</a>
             </div>
-        }
-        if(@ViewBag.navId==2){
-            <div id="navBar"> 
-                // Class below this.
-                <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                    // Text/name attribute below this.
-                    <a class="navbar-brand" href="#" contenteditable="true" name="WebSiteName">WebSiteName</a>
-                    </div>
-                    // Class below this.
-                    <ul class="nav navbar-nav navbar-right">
-                        // Text/name attribute below this.
-                        <li><a href="#" contenteditable="true" name="Page 1">Page 1</a></li>
-                        // Text/name attribute below this.
-                        <li><a href="#" contenteditable="true" name="Page 2">Page 2</a></li>
-                        // Text/name attribute below this.
-                        <li><a href="#" contenteditable="true" name="Page 3">Page 3</a></li>
-                    </ul>
-                </div>
-                </nav>
-            </div>
-        }
-        if(@ViewBag.navId==3){  
-            // This nav bar is totally fucked. It has it's own structure and everything.
-            // Needs its own custom entry basically. Sorry.
-            <div id="navBar">
-                <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                        // Text/name attribute below this.
-                        <a class="nav-link active" href="#" contenteditable="true" name="WebSiteName">WebSiteName</a>
-                    </li>
-                    <li class="nav-item">
-                        // Text/name attribute below this.
-                        <a href="#" contenteditable="true" name="Action">Action</a>
-                    </li>
-                    <li class="nav-item">
-                        // Text/name attribute below this.
-                        <a class="nav-link" href="#" contenteditable="true" name="Link">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        // Text/name attribute below this.
-                        <a class="nav-link disabled" href="#" contenteditable="true" name="Disabled">Disabled</a>
-                    </li>
-                </ul>
-            </div>
-        }
-    }
-    @{
-        if(@ViewBag.sidebarId==1){
-            // Class below this.
-            <div class="col-sm-2 sidebar1" name="col-sm-2 sidebar1">
-                <ul class="nav flex-column">
-                // Text/name attribute below this.
-                <li class="nav-item"><a class="nav-link" href="#" contenteditable="true" name="Active">Active</a></li>
-                // Text/name attribute below this.
-                <li class="nav-item"><a class="nav-link" href="#" contenteditable="true" name="Link">Link</a></li>
-                // Text/name attribute below this.
-                <li class="nav-item"><a class="nav-link" href="#" contenteditable="true" name="Link">Link</a></li>
-                // Text/name attribute below this.
-                <li class="nav-item"><a class="nav-link" href="#" contenteditable="true" name="Disabled">Disabled</a></li>
-                </ul>
-            </div>
-        }
-        else if(@ViewBag.sidebarId==2){
-            // Class below this.
-            <div class="col-sm-2 text-center sidebar2" name="col-sm-2 text-center sidebar2">
-                <ul class="nav flex-column">
-                    // Text/name attribute below this.
-                    <li class="nav-item"><a class="nav-link" href="#" contenteditable="true" name="Active">Active</a></li>
-                    // Text/name attribute below this.
-                    <li class="nav-item"><a class="nav-link" href="#" contenteditable="true" name="Link">Link</a></li>
-                    // Text/name attribute below this.
-                    <li class="nav-item"><a class="nav-link" href="#" contenteditable="true" name="Link">Link</a></li>
-                    // Text/name attribute below this.
-                    <li class="nav-item"><a class="nav-link" href="#" contenteditable="true" name="Disabled">Disabled</a></li>
-                </ul>
-            </div>      
-        }
-        else if(@ViewBag.sidebarId==3){
-            // Class below this.
-            <div class="col-sm-2 text-center sidebar3" name="col-sm-2 text-center sidebar3">
-                <ul class="nav flex-column">
-                    // Text/name attribute below this.
-                    <li class="nav-item"><a class="nav-link active" href="#" contenteditable="true"  name="Active">Active</a></li>
-                    // Text/name attribute below this.
-                    <li class="nav-item"><a class="nav-link" href="#" contenteditable="true"  name="Link">Link</a></li>
-                    // Text/name attribute below this.
-                    <li class="nav-item"><a class="nav-link" href="#" contenteditable="true" name="Link">Link</a></li>
-                    // Text/name attribute below this.
-                    <li class="nav-item"><a class="nav-link disabled" href="#" contenteditable="true" name="Disabled">Disabled</a></li>
-                </ul>
-            </div>            
-        }
-    }
-    <div class="col-sm-9 col-sm-offset-2">
-        @{
-            if(@ViewBag.headerId==1){
-                // Class below this AND Text/name attribute below this.
-                <h2 class="font1" contenteditable="true" name="Post Title">Post Title</h2>
-            }  else if(@ViewBag.headerId==2){
-                // Class below this AND Text/name attribute below this.
-                <h2 class="font2" contenteditable="true" name="Post Title">Post Title</h2>
-            }  else if(@ViewBag.headerId==3){
-                // Class below this AND Text/name attribute below this.
-                <h2 class="font3" contenteditable="true" name="Post Title">Post Title</h2>
-            }
-            if(@ViewBag.bodyId==1){
-                // Class below this AND Text/name attribute below this.
-                <h5 class="font1" name=" Post by John Doe, Mar 30, 2017."><span class="glyphicon glyphicon-time"></span> Post by John Doe, Mar 30, 2017.</h5><br>
-                // Class below this AND Text/name attribute below this.
-                <p class="font1" contenteditable="true" name="Edit your post text here.">Edit your post text here.</p>
-            }  else if(@ViewBag.bodyId==2){
-                // Class below this AND Text/name attribute below this.
-                <h5 class="font2" name=" Post by John Doe, Mar 30, 2017."><span class="glyphicon glyphicon-time"></span> Post by John Doe, Mar 30, 2017.</h5><br>
-                // Class below this AND Text/name attribute below this.
-                <p class="font2" contenteditable="true" name="Edit your post text here.">Edit your post text here.</p>
-            }  else if(@ViewBag.bodyId==3){
-                // Class below this AND Text/name attribute below this.
-                <h5 class="font3" name=" Post by John Doe, Mar 30, 2017."><span class="glyphicon glyphicon-time"></span> Post by John Doe, Mar 30, 2017.</h5><br>
-                // Class below this AND Text/name attribute below this.
-                <p class="font3" contenteditable="true" name="Edit your post text here.">Edit your post text here.</p>
-            }
-        }
+            <!--Class below this.-->
+            <ul class="nav navbar-nav">
+            <!--Text/name attribute below this.-->
+            <li><a href="#" contenteditable="true" name="Home">Home</a></li>
+            <!--Text/name attribute below this.-->
+            <li><a href="#" contenteditable="true" name="Page 1">Page 1</a></li>
+            <!--Text/name attribute below this.-->
+            <li><a href="#" contenteditable="true" name="Page 2">Page 2</a></li>
+            <!--Text/name attribute below this.-->
+            <li><a href="#" contenteditable="true" name="Page 3">Page 3</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+}
+if(@ViewBag.navId==2){
+<div id="navBar"> 
+    <!--Class below this.-->
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+        <!--Text/name attribute below this.-->
+        <a class="navbar-brand" href="#" contenteditable="true" name="WebSiteName">WebSiteName</a>
+        </div>
+        <!--Class below this.-->
+        <ul class="nav navbar-nav navbar-right">
+            <!--Text/name attribute below this.-->
+            <li><a href="#" contenteditable="true" name="Page 1">Page 1</a></li>
+            <!--Text/name attribute below this.-->
+            <li><a href="#" contenteditable="true" name="Page 2">Page 2</a></li>
+            <!--Text/name attribute below this.-->
+            <li><a href="#" contenteditable="true" name="Page 3">Page 3</a></li>
+        </ul>
     </div>
+    </nav>
+</div>
+}
+if(@ViewBag.navId==3){  
+<!--This nav bar is amazing. It has it's own structure and everything.-->
+<!--Needs its own custom entry basically. Sorry.-->
+<div id="navBar">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <!--Text/name attribute below this.-->
+            <a class="nav-link active" href="#" contenteditable="true" name="WebSiteName">WebSiteName</a>
+        </li>
+        <li class="nav-item">
+            <!--Text/name attribute below this.-->
+            <a href="#" contenteditable="true" name="Action">Action</a>
+        </li>
+        <li class="nav-item">
+            <!--Text/name attribute below this.-->
+            <a class="nav-link" href="#" contenteditable="true" name="Link">Link</a>
+        </li>
+        <li class="nav-item">
+            <!--Text/name attribute below this.-->
+            <a class="nav-link disabled" href="#" contenteditable="true" name="Disabled">Disabled</a>
+        </li>
+    </ul>
+</div>
+}
+}
+@{
+if(@ViewBag.sidebarId==1){
+<!--Class below this.-->
+<div class="col-sm-2 sidebar1" name="col-sm-2 sidebar1">
+    <ul class="nav flex-column">
+    <!--Text/name attribute below this.-->
+    <li class="nav-item"><a class="nav-link" href="#" contenteditable="true" name="Active">Active</a></li>
+    <!--Text/name attribute below this.-->
+    <li class="nav-item"><a class="nav-link" href="#" contenteditable="true" name="Link">Link</a></li>
+    <!--Text/name attribute below this.-->
+    <li class="nav-item"><a class="nav-link" href="#" contenteditable="true" name="Link">Link</a></li>
+    <!--Text/name attribute below this.-->
+    <li class="nav-item"><a class="nav-link" href="#" contenteditable="true" name="Disabled">Disabled</a></li>
+    </ul>
+</div>
+}
+else if(@ViewBag.sidebarId==2){
+<!--Class below this.-->
+<div class="col-sm-2 text-center sidebar2" name="col-sm-2 text-center sidebar2">
+    <ul class="nav flex-column">
+        <!--Text/name attribute below this.-->
+        <li class="nav-item"><a class="nav-link" href="#" contenteditable="true" name="Active">Active</a></li>
+        <!--Text/name attribute below this.-->
+        <li class="nav-item"><a class="nav-link" href="#" contenteditable="true" name="Link">Link</a></li>
+        <!--Text/name attribute below this.-->
+        <li class="nav-item"><a class="nav-link" href="#" contenteditable="true" name="Link">Link</a></li>
+        <!--Text/name attribute below this.-->
+        <li class="nav-item"><a class="nav-link" href="#" contenteditable="true" name="Disabled">Disabled</a></li>
+    </ul>
+</div>      
+}
+else if(@ViewBag.sidebarId==3){
+<!--Class below this.-->
+<div class="col-sm-2 text-center sidebar3" name="col-sm-2 text-center sidebar3">
+    <ul class="nav flex-column">
+        <!--Text/name attribute below this.-->
+        <li class="nav-item"><a class="nav-link active" href="#" contenteditable="true"  name="Active">Active</a></li>
+        <!--Text/name attribute below this.-->
+        <li class="nav-item"><a class="nav-link" href="#" contenteditable="true"  name="Link">Link</a></li>
+        <!--Text/name attribute below this.-->
+        <li class="nav-item"><a class="nav-link" href="#" contenteditable="true" name="Link">Link</a></li>
+        <!--Text/name attribute below this.-->
+        <li class="nav-item"><a class="nav-link disabled" href="#" contenteditable="true" name="Disabled">Disabled</a></li>
+    </ul>
+</div>            
+}
+}
+<div class="col-sm-9 col-sm-offset-2">
+@{
+if(@ViewBag.headerId==1){
+    <!--Class below this AND Text/name attribute below this.-->
+    <h2 class="font1" contenteditable="true" name="Post Title">Post Title</h2>
+}  else if(@ViewBag.headerId==2){
+    <!--Class below this AND Text/name attribute below this.-->
+    <h2 class="font2" contenteditable="true" name="Post Title">Post Title</h2>
+}  else if(@ViewBag.headerId==3){
+    <!--Class below this AND Text/name attribute below this.-->
+    <h2 class="font3" contenteditable="true" name="Post Title">Post Title</h2>
+}
+if(@ViewBag.bodyId==1){
+    <!--Class below this AND Text/name attribute below this.-->
+    <h5 class="font1" name=" Post by John Doe, Mar 30, 2017."><span class="glyphicon glyphicon-time"></span> Post by John Doe, Mar 30, 2017.</h5><br>
+    <!--Class below this AND Text/name attribute below this.-->
+    <p class="font1" contenteditable="true" name="Edit your post text here.">Edit your post text here.</p>
+}  else if(@ViewBag.bodyId==2){
+    <!--Class below this AND Text/name attribute below this.-->
+    <h5 class="font2" name=" Post by John Doe, Mar 30, 2017."><span class="glyphicon glyphicon-time"></span> Post by John Doe, Mar 30, 2017.</h5><br>
+    <!--Class below this AND Text/name attribute below this.-->
+    <p class="font2" contenteditable="true" name="Edit your post text here.">Edit your post text here.</p>
+}  else if(@ViewBag.bodyId==3){
+    <!--Class below this AND Text/name attribute below this.-->
+    <h5 class="font3" name=" Post by John Doe, Mar 30, 2017."><span class="glyphicon glyphicon-time"></span> Post by John Doe, Mar 30, 2017.</h5><br>
+    <!--Class below this AND Text/name attribute below this.-->
+    <p class="font3" contenteditable="true" name="Edit your post text here.">Edit your post text here.</p>
+}
+}
+</div>
 </div>
 <form action="/jquery_handler" id="submit_changes">
     <input class="col-sm-offset-9" type="submit" value="Submit your changes">

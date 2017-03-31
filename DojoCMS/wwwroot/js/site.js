@@ -27,8 +27,15 @@ $(document).ready(function() {
 
 
 
-        $.post( "CreateFile", { returner }, function( data ) {
-            console.log( data ); // Return data
-        }, "json");
+        $.ajax({
+        type: "POST",
+        url: "/CreateFile",
+        data: {HTMLString: returner},
+        success: function(data){
+            alert(data.Result);
+        },
+        dataType: "json",
+        traditional: true
+    });
     });
 });
