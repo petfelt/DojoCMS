@@ -83,11 +83,10 @@ namespace DojoCMS.Controllers
         [HttpPost]
         [Route("CreateFile")]
         public IActionResult CreateFile(string HTMLString){
-            string PassedString = "/@{&#9ViewData["+"Title"+"]  = "+"New Page"+";&#9}"+HTMLString+".cshtml";
-            FileManager.MakeUserDirectory("UserPages");
+            string PassedString = "@{\n\tViewData["+"Title"+"]  = "+"New Page"+";\n}\n"+HTMLString;
             FileManager.MakeUserViewsDirectory("UserPages", "NewPageViews");
             FileManager.MakePageFile("UserPages","NewPageViews", PassedString);
-            return View("UserPages/NewPageViews/");
+            return RedirectToAction("Admin", "Admin");
         }
     }
 }
