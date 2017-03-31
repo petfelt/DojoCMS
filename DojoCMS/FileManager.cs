@@ -22,7 +22,7 @@ namespace DojoCMS
         public static void MakePageFile(string UserName, string PageName, string HTMLString)
         {
             string PathString = Directory.GetCurrentDirectory();
-            PathString = Path.Combine(PathString, UserName, PageName, "Index.cshtml");
+            PathString = Path.Combine(PathString, UserName, PageName, ".cshtml");
             System.IO.File.WriteAllText(PathString, HTMLString);
         }
     }

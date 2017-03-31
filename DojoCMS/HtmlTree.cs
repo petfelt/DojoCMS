@@ -20,6 +20,11 @@ namespace DojoCMS
             return retStr;
             
         }
+
+        public String addTemplate() {
+            return "@{\n\tViewData[\"Title\"] = \"Login\";\n}";
+        }
+
         public void buildSideBar() {
             List<String> links = new List<String>();
             List<String> demo = new List<String>();
@@ -30,18 +35,11 @@ namespace DojoCMS
             links.Add("Test4");
             addNode("sideBar", "div", demo);
             String contentStr = String.Format(
-                                "<div class=\"\">\n" +
+                                "<div class=\"col-sm-2 sidebar2\">\n" +
                                 "\t\t\t<br />\n" +
                                 "\t\t\t<ul class = \"nav nav-pills nav-stacked toggle\">\n" +
                                 compileLinks(links) +
-                                "\t\t\t</ul><br />\n" + 
-                                "\t\t\t<div class=\"input-group\">\n" + 
-                                "\t\t\t\t<input type = \"text\" class = \"form-control\" placeholder = \"Search Blog...\">\n" +
-                                "\t\t\t\t<span class = \"input-group-btn\">\n" +
-                                "\t\t\t\t<button class=\"btn btn-default\" type = \"button\">\n" +
-                                "\t\t\t\t\t<span class=\"glyphicon glyphicon-search\"></span>\n"+
-                                "\t\t\t\t</button>\n" +
-                                "\t\t\t\t</span>\n" +
+                                "\t\t\t</ul><br />\n" +
                                 "\t\t\t</div>\n" +
                                 "\t\t</div>\n" +
                                 
@@ -60,7 +58,7 @@ namespace DojoCMS
             demo.Add("class = \"navbar navbar-inverse\"");
             addNode("navBar", "nav", demo);
             String contentStr = String.Format("" +
-                                 "<div class =\"container-fluid\"\n" +
+                                 "<div class =\"container-fluid\">\n" +
                                  "\t\t\t<div class = \"navbar-header\">\n" +
                                  "\t\t\t\t<a class=\"navbar-brand\" href=\"#\">{0}</a>\n" +
                                  "\t\t\t</div>\n" + 
@@ -84,7 +82,8 @@ namespace DojoCMS
                                 "\t</div>\n" +
                                 "\t<div>\n" +
                                 "\t\t<h5 class=\"font1\"><span class=\"glyphicon glyphicon-time\"></span> {1} {2} </h5><br />\n"+
-                                "\t\t<p class=\"font1\">{3}</p>\n",
+                                "\t\t<p class=\"font1\">{3}</p>\n" +
+                                "\t</div>\n",
                                     "Title", "UserName", "Date Submitted", "Edit your post here");
             updateContent("mainBody", contentStr);
 
@@ -107,7 +106,7 @@ namespace DojoCMS
 
         public String toHtml()
         {
-            return toHtml(root);
+            return addTemplate() + "\n" + toHtml(root);
         }
 
         public String toHtml(Node focus)
