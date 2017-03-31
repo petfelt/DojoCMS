@@ -3,7 +3,7 @@ $(document).ready(function() {
     $("#submit_changes").submit(function(e){
         e.preventDefault();
         var returner = $("#allData").html();
-        console.log($("#allData").html());
+        //console.log($("#allData").html());
         //
         // Old build of dictionary <string, dictionary <string, objects>> to pass back.
         // var returner = {};
