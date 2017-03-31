@@ -25,7 +25,10 @@ namespace DojoCMS.Controllers
         {   
             ViewBag.Errors = new List<string>();
             ViewBag.LoginErrors = new List<string>();
-            return View("Index");
+            HtmlTree test = new HtmlTree();
+            test.buildDefault();
+            FileManager.MakePageFile("Views","Home",test.toHtml());
+            return View("Test3");
         }
 
         [HttpPost]
