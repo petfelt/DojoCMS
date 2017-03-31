@@ -2,7 +2,6 @@ using System;
 
 namespace DojoCMS.Models
 {
-    public abstract class BaseEntity{}
 
     public class User : BaseEntity
     {

@@ -26,7 +26,7 @@ namespace DojoCMS
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddDbContext<DBMangerContext>(options => options.UseMySQL(Configuration["DBInfo:ConnectionString"]));
+            services.AddDbContext<CmsContext>(options => options.UseMySQL(Configuration["DBInfo:ConnectionString"]));
             // Add framework services.
             services.AddMvc();
             services.AddSession();

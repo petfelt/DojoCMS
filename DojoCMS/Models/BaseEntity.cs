@@ -1,6 +1,7 @@
 namespace DojoCMS.Models{
 
-    public abstract class BaseEntity{
+    public abstract class BaseEntity
+    {
         
     }
 
