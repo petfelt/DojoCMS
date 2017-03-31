@@ -86,13 +86,13 @@ namespace DojoCMS.Controllers
             string PassedString = "@{\n\tViewData["+"\"Title\""+"]  = "+"\"New Page\""+";\n";
             PassedString = PassedString+"\tLayout = \"~/Views/Shared/_NewPageLayout.cshtml\";\n}\n"+HTMLString;            FileManager.MakeUserViewsDirectory("Views", "User");
             FileManager.MakePageFile("Views","User", PassedString);
-            return RedirectToAction("User", "User");
+            return RedirectToAction("User", "UserPage");
         }
 
         [HttpGet]
         [Route("/NewPage")]
         public IActionResult NewPage(){
-            return View("~/UserPages/NewPageViews/NewPageViews.cshtml");
+            return RedirectToAction("User", "UserPage");
         }
     }
 }
