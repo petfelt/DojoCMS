@@ -50,7 +50,7 @@ namespace DojoCMS.Controllers
                     _context.SaveChanges();
                      HttpContext.Session.SetInt32("CurrUserId", newUser.ID);
                     //left route empty to fill later
-                    return RedirectToAction("Admin", "admin");
+                    return RedirectToAction("Admin", "Admin");
 
                 }//end of IsValid 
                 else{
@@ -97,7 +97,7 @@ namespace DojoCMS.Controllers
                     HttpContext.Session.SetInt32("CurrUserId", CheckUser.ID);
 
                     //fill out the route for display User Page.
-                    return RedirectToAction("Admin", "admin");
+                    return RedirectToAction("Admin", "Admin");
 
             }else{
                 ViewBag.LoginErrors = new List<string>{"Invalid Email or Password"};
