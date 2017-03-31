@@ -1,26 +1,63 @@
+@{
+    ViewData["Title"] = "Register ";
+}
 
+<div class="backgroundBody">
+  <div class="col-lg-12">
+    <div id="text">
+      <h1>Create your account below</h1>
+    </div>
 
+    <div>
+    @{
+        foreach(var error in ViewBag.Errors)
+        {
+            //If there are any errors for a field...
+            if(@error.Errors.Count > 0)
+            {
+                // We show the first error for that field
+                <p>@error.Errors[0].ErrorMessage</p>
+            }
+        }
+    }
+</div>
 
-<h1>Let's get started </h1>
-
-<div id="register">
-    <form action="Register" method="POST">
-
-        <label for="name"> Name</label>
-        <input type="text" id="name" name="name"><br>
-
-        <label for="username"> UserName</label>
-        <input type="text" id="username" name="username"><br>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email"><br>
-
-        <label for="pw">Password</label>
-        <input type="password" id="pw" name="password"><br>
-
-        <label for="Pconfirm">Password Confirmation</label>
-        <input type="text" id="Pconfirm" name="PassConfirm"><br>
-        <button type="submit" value="Submit">Register</button>
+    <form class="form-horizontal" action="Register" method="post">
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="name"></label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="username"></label>
+        <div class="col-sm-8 ">
+          <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username">
+        </div>
+      </div>
+        <div class="form-group">
+        <label class="control-label col-sm-2" for="email"></label>
+        <div class="col-sm-8"> 
+          <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="password"></label>
+        <div class="col-sm-8"> 
+          <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="PassConfirm"></label>
+        <div class="col-sm-8"> 
+          <input type="password" class="form-control" id="PassConfirm" name="PassConfirm" placeholder="Confirm your password">
+        </div>
+      </div>
+      <div class="form-group"> 
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default">SUBMIT</button>
+        </div>
+      </div>
     </form>
-
+  </div>
 </div>
