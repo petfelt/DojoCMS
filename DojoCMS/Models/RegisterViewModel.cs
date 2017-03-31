@@ -21,4 +21,3 @@ namespace DojoCMS.Models
         public string PassConfirm { get; set; }
     }
 }
-
