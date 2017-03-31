@@ -11,7 +11,7 @@ namespace DojoCMS.Controllers
     public class AdminController : Controller
     {
         [HttpGet]
-        [Route("")]
+        [Route("Admin")]
         public IActionResult Admin()
         {   
             ViewBag.Errors = new List<string>();
