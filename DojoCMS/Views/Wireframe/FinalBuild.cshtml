@@ -1,154 +1,139 @@
 @{
     ViewData["Title"] = "WireFrames Page";
 }
-<div>
-<div>
+<script>
+    document.addEventListener('keydown', function (event) {
+    var esc = event.which == 27,
+    nl = event.which == 13,
+    el = event.target,
+    input = el.nodeName != 'INPUT' && el.nodeName != 'TEXTAREA',
+   // var result="";
+    data = {};
+
+if (input) {
+    if (esc) {
+      // restore state
+      document.execCommand('undo');
+      el.blur();
+    } else if (nl) {
+        el.setAttribute("name",el.innerHTML);
+       // el.getAttribute("name",)
+        el.blur();
+        event.preventDefault();
+    }
+  }
+}, true);
+
+</script>
+<div id="allData">
     @{
         if(@ViewBag.navId==1){
-            <div id="navbar1">
+            <div id="navBar">
                 <nav class="navbar navbar-inverse">
                     <div class="container-fluid">
                         <div class="navbar-header">
-                            <a class="navbar-brand" href="#" contenteditable="true">WebSiteName</a>
+                            <a class="navbar-brand" href="#" contenteditable="true" name="WebSiteName">WebSiteName</a>
                         </div>
                         <ul class="nav navbar-nav">
-                        <li><a href="#" contenteditable="true">Home</a></li>
-                        <li><a href="#" contenteditable="true">Page 1</a></li>
-                        <li><a href="#" contenteditable="true">Page 2</a></li>
-                        <li><a href="#" contenteditable="true">Page 3</a></li>
+                        <li><a href="#" contenteditable="true" name="Home">Home</a></li>
+                        <li><a href="#" contenteditable="true" name="Page 1">Page 1</a></li>
+                        <li><a href="#" contenteditable="true" name="Page 2">Page 2</a></li>
+                        <li><a href="#" contenteditable="true" name="Page 3">Page 3</a></li>
                         </ul>
                     </div>
                 </nav>
             </div>
         }
         if(@ViewBag.navId==2){
-            <div id="navbar2"> 
+            <div id="navBar"> 
                 <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                    <a class="navbar-brand" href="#" contenteditable="true">WebSiteName</a>
+                    <a class="navbar-brand" href="#" contenteditable="true" name="WebSiteName">WebSiteName</a>
                     </div>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#" contenteditable="true">Page 1</a></li>
-                        <li><a href="#" contenteditable="true">Page 2</a></li>
-                        <li><a href="#" contenteditable="true">Page 3</a></li>
+                        <li><a href="#" contenteditable="true" name="Page 1">Page 1</a></li>
+                        <li><a href="#" contenteditable="true" name="Page 2">Page 2</a></li>
+                        <li><a href="#" contenteditable="true" name="Page 3">Page 3</a></li>
                     </ul>
                 </div>
                 </nav>
             </div>
         }
         if(@ViewBag.navId==3){  
-            <div id="navbar3">
+            <div id="navBar">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#" contenteditable="true">Active</a>
+                        <a class="nav-link active" href="#" contenteditable="true" name="WebSiteName">WebSiteName</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" contenteditable="true">Action</a>
+                        <a href="#" contenteditable="true" name="Action">Action</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" contenteditable="true">Link</a>
+                        <a class="nav-link" href="#" contenteditable="true" name="Link">Link</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#" contenteditable="true">Disabled</a>
+                        <a class="nav-link disabled" href="#" contenteditable="true" name="Disabled">Disabled</a>
                     </li>
                 </ul>
             </div>
         }
     }
-</div>
-<div class="col-sm-3 sidebar  text-center">
     @{
         if(@ViewBag.sidebarId==1){
-            <div class="">
-                <br>
-                <ul class="nav nav-pills nav-stacked toggle">
-                    <li><a href="#section1" contenteditable="true">Home</a></li>
-                    <li><a href="#section2" contenteditable="true">Friends</a></li>
-                    <li><a href="#section3" contenteditable="true">Family</a></li>
-                    <li><a href="#section4" contenteditable="true">Photos</a></li>
-                </ul><br>
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search Blog...">
-                    <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">
-                        <span class="glyphicon glyphicon-search"></span>
-                    </button>
-                    </span>
-                </div>
+            <div class="col-sm-2 sidebar1" name="col-sm-2 sidebar1">
+                <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link" href="#" contenteditable="true" name="Active">Active</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" contenteditable="true" name="Link">Link</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" contenteditable="true" name="Link">Link</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" contenteditable="true" name="Disabled">Disabled</a></li>
+                </ul>
             </div>
         }
         else if(@ViewBag.sidebarId==2){
-                <div class="sidebar1">
+            <div class="col-sm-2 text-center sidebar2" name="col-sm-2 text-center sidebar2">
                 <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#" contenteditable="true">Active</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" contenteditable="true">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" contenteditable="true">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" contenteditable="true">Disabled</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#" contenteditable="true" name="Active">Active</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" contenteditable="true" name="Link">Link</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" contenteditable="true" name="Link">Link</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" contenteditable="true" name="Disabled">Disabled</a></li>
                 </ul>
-                </div>           
+            </div>      
         }
         else if(@ViewBag.sidebarId==3){
-            <div class="sidebar3">
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#" contenteditable="true">Active</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" contenteditable="true">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" contenteditable="true">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" contenteditable="true">Disabled</a>
-                </li>
-            </ul>
-            </div>        
+            <div class="col-sm-2 text-center sidebar3" name="col-sm-2 text-center sidebar3">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link active" href="#" contenteditable="true"  name="Active">Active</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" contenteditable="true"  name="Link">Link</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" contenteditable="true" name="Link">Link</a></li>
+                    <li class="nav-item"><a class="nav-link disabled" href="#" contenteditable="true" name="Disabled">Disabled</a></li>
+                </ul>
+            </div>            
         }
     }
-</div>
-<div class="col-sm-9 col-sm-offset-3">
-    @{
-        if(@ViewBag.headerId==1){
-            <div class="">
-                <h2 class="font1" contenteditable="true">Post Title</h2>
-            </div>
-        }  else if(@ViewBag.headerId==2){
-            <div class="">
-                <h2 class="font2" contenteditable="true">Post Title</h2>
-            </div>
-        }  else if(@ViewBag.headerId==3){
-            <div class="">
-                <h2 class="font3" contenteditable="true">Post Title</h2>
-            </div>
+    <div class="col-sm-9 col-sm-offset-2">
+        @{
+            if(@ViewBag.headerId==1){
+                <h2 class="font1" contenteditable="true" name="Post Title">Post Title</h2>
+            }  else if(@ViewBag.headerId==2){
+                <h2 class="font2" contenteditable="true" name="Post Title">Post Title</h2>
+            }  else if(@ViewBag.headerId==3){
+                <h2 class="font3" contenteditable="true" name="Post Title">Post Title</h2>
+            }
+            if(@ViewBag.bodyId==1){
+                <h5 class="font1" name=" Post by John Doe, Mar 30, 2017."><span class="glyphicon glyphicon-time"></span> Post by John Doe, Mar 30, 2017.</h5><br>
+                <p class="font1" contenteditable="true" name="Edit your post text here.">Edit your post text here.</p>
+            }  else if(@ViewBag.bodyId==2){
+                <h5 class="font2" name=" Post by John Doe, Mar 30, 2017."><span class="glyphicon glyphicon-time"></span> Post by John Doe, Mar 30, 2017.</h5><br>
+                <p class="font2" contenteditable="true" name="Edit your post text here.">Edit your post text here.</p>
+            }  else if(@ViewBag.bodyId==3){
+                <h5 class="font3" name=" Post by John Doe, Mar 30, 2017."><span class="glyphicon glyphicon-time"></span> Post by John Doe, Mar 30, 2017.</h5><br>
+                <p class="font3" contenteditable="true" name="Edit your post text here.">Edit your post text here.</p>
+            }
         }
-        if(@ViewBag.bodyId==1){
-            <div class="">
-                <h5 class="font1"><span class="glyphicon glyphicon-time"></span> Post by John Doe, Mar 30, 2017.</h5><br>
-                <p class="font1" contenteditable="true">Edit your post text here.</p>
-            </div>
-        }  else if(@ViewBag.bodyId==2){
-            <div class="">
-                <h5 class="font2"><span class="glyphicon glyphicon-time"></span> Post by John Doe, Mar 30, 2017.</h5><br>
-                <p class="font2" contenteditable="true">Edit your post text here.</p>
-            </div>
-        }  else if(@ViewBag.bodyId==3){
-            <div class="">
-                <h5 class="font3"><span class="glyphicon glyphicon-time"></span> Post by John Doe, Mar 30, 2017.</h5><br>
-                <p class="font3" contenteditable="true">Edit your post text here.</p>
-            </div>
-        }
-    }
-
+    </div>
 </div>
-</div>
+<form action="/jquery_handler" id="submit_changes">
+    <input class="col-sm-offset-9" type="submit" value="Submit your changes">
+</form>
 

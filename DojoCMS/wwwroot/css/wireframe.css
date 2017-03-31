@@ -58,13 +58,17 @@ body{
 }
 .sidebar2{
     position:absolute;
-    left:30%;
     height:80%;
     background-color:lightgrey;
 }
+.sidebar2push{
+    left:27.5%;
+}
+.sidebar3push{
+    left:50%;
+}
 .sidebar3{
     position:absolute;
-    left:50%;
     height:80%;
     text-align: right;
     background-color:black
