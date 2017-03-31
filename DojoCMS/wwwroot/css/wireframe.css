@@ -1,4 +1,25 @@
-/*Write all of your CSS here*/
+.sidebar{
+    position:absolute;
+    height:86%;
+    background-color:cadetblue;
+}
+.side1 li a{
+    color:black;
+}
+.sidebar1 li a{
+    color:white;
+}
+.sidebar2 li a{
+    color:black;
+}
+.sidebar3 li a{
+    color:white;
+}
+.sideNext{
+    position:relative;
+    left:80%;
+    /*float:right;*/
+}
 body{
     /*background-color:lightgray;*/
    background-color:white;
@@ -30,17 +51,24 @@ body{
 .navbars{
     margin-bottom: 5%;
 }
-
-.sidebar{
-    position:absolute;
-    height:79%;
-    background-color: #f1f1f1;
-    /*background-color: gray;*/
-}
 .sidebar1{
-    text-align:center;
+    position:absolute;
+    height:80%;
+    background-color:cadetblue;
 }
-
+.sidebar2{
+    position:absolute;
+    left:30%;
+    height:80%;
+    background-color:lightgrey;
+}
+.sidebar3{
+    position:absolute;
+    left:50%;
+    height:80%;
+    text-align: right;
+    background-color:black
+}
 .font1{
     font-family: Georgia, "Times New Roman", Times, serif;
 }
