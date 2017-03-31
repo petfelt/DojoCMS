@@ -14,8 +14,28 @@ Class:
 
     CSGenerator
 
-    FileCreator
-    
+    FileManager
+	MakeUserDirectory(string UserName)
+		Input: String
+		Output: N/A
+		Inherited From: N/A
+		Access: Public
+		Functionality: Creates a User directory to hold all User files
+
+	MakeUserViewsDirectory(string UserName, string PageName)
+    		Input: String, String
+		Output: N/A
+		Inherited From: N/A
+		Access: Public
+		Functionality: Creates a User Views directory to hold all User Views files
+
+	MakePageFile(string UserName, string PageName, string HTMLString)
+    		Input: String, String
+		Output: N/A
+		Inherited From: N/A
+		Access: Public
+		Functionality: Creates a .cshtml page in User/Views from input string
+
     DBSpawner:
         Constructor:
             DBSpawner(String)

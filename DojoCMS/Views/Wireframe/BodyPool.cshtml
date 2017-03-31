@@ -1,0 +1,35 @@
+@{
+    ViewData["Title"] = "WireFrames Page";
+}
+<script>
+    function SelectedBody(BodyId){
+        $('#result').val("");
+        if(BodyId){
+            $.get('/selectedBody/'+BodyId,function(req,res){
+                $('#result').val(BodyId +' is selected');
+            });
+        }
+    }
+</script>
+
+<div class="container">
+    <div class="col-sm-4 col-lg-4"  onclick="SelectedBody(1)">
+        <h4>Body Font 1</h4>
+        <h5 class="font1"><span class="glyphicon glyphicon-time"></span> Post by John Doe, Mar 30, 2017.</h5>
+        <p class="font1">"Serif" post text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="col-sm-4 col-lg-4"  onclick="SelectedBody(2)">
+        <h4>Body Font 2</h4>
+        <h5 class="font2"><span class="glyphicon glyphicon-time"></span> Post by John Doe, Mar 30, 2017.</h5>
+        <p class="font2">"Monospace" post text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="col-sm-4 col-lg-4"  onclick="SelectedBody(3)">
+        <h4>Body Font 3</h4>
+        <h5 class="font3"><span class="glyphicon glyphicon-time"></span> Post by John Doe, Mar 30, 2017.</h5>
+        <p class="font3">"Sans-serif" post text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="col-sm-12 col-lg-12">
+        <input type="text" id="result">
+        <a href="/FinalBuild" class="btn btn-primary">Next</a>
+    </div>
+</div>
